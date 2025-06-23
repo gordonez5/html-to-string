@@ -1,0 +1,36 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+
+  line-height: 1.2;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+p {
+  margin: 0 0 1rem;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+a {
+  color: var(--link-color)
+}

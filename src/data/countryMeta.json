@@ -1,0 +1,32 @@
+{
+  "uk": {
+    "id": 1,
+    "name": "UK",
+    "lang": "en-gb",
+    "code": "gb"
+  },
+  "denmark": {
+    "id": 2,
+    "name": "Denmark",
+    "lang": "dk",
+    "code": "dk"
+  },
+  "finland": {
+    "id": 3,
+    "name": "Finland",
+    "lang": "fi",
+    "code": "fi"
+  },
+  "norway": {
+    "id": 4,
+    "name": "Norway",
+    "lang": "no",
+    "code": "no"
+  },
+  "sweden": {
+    "id": 5,
+    "name": "Sweden",
+    "lang": "sv",
+    "code": "se"
+  }
+}

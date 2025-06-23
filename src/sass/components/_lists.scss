@@ -1,0 +1,7 @@
+.list {
+  &--unordered {
+    & > li {
+      margin: 0.5rem 0;
+    }
+  }
+}

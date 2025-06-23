@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as *;
+
+.main-content {
+  // box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+
+  @include mq(md) {
+    padding: 2rem;
+  }
+}
+
+.preferences-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.theme-toggle {
+  display: flex;
+  gap: 2px;
+
+  .view-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.grid {
+  display: flex;
+  gap: 2rem;
+  margin: 0 0 2rem;
+
+  .grid-item {
+    background-color: var(--item-bg-color);
+    width: 50%;
+    border-color: var(--clr-text);
+    border-radius: 1rem;
+    border-style: dotted;
+    border-width: 2px;
+    padding: 1.5rem;
+  }
+}

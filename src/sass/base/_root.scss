@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+:root {
+  --ff-primary: 'Roboto', system-ui, sans-serif;
+
+  @each $key, $value in $font-sizes {
+    --fs-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-weights {
+    --fw-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $colors {
+    --clr-#{$key}: #{$value};
+  }
+
+  [data-theme="light"] {
+    @each $key, $value in $colors_theme_sodashop_light {
+      --clr-#{$key}: #{$value};
+    }
+
+    --navbar-bg-color: #000000;
+    --item-bg-color: #fdfdfd;
+    --link-color: blue;
+  }
+
+  [data-theme="dark"] {
+    @each $key, $value in $colors_theme_sodashop_dark {
+      --clr-#{$key}: #{$value};
+    }
+
+    --item-bg-color: #000000;
+    --item-bg-color: #333b49;
+    --link-color: var(--clr-secondary);
+  }
+}
+
+
+
