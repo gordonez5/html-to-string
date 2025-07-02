@@ -1,6 +1,9 @@
 code {
   &.inline {
-    color: var(--clr-accent);
     font-weight: bold;
+
+    &.accent {
+      color: var(--clr-accent);
+    }
   }
 }

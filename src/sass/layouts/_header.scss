@@ -1,11 +1,16 @@
 @use "../abstracts/mixins" as *;
 
+.site-header {
+  background-color: var(--navbar-bg-color);
+}
+
 .navbar {
   align-items: center;
-  background-color: var(--navbar-bg-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--site-width);
   padding: 1rem;
 
   @include mq(md) {

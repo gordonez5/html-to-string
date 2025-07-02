@@ -37,6 +37,10 @@
     border-color: var(--clr-accent);
     border-style: solid;
     border-width: 2px;
+
+    span {
+      margin-left: 0.5rem;
+    }
   }
 
   &-icon {

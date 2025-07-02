@@ -26,3 +26,6 @@ dist-ssr
 
 src/components/switches/SortToggle.jsx
 src/components/switches/ViewToggle.jsx
+src/data/all.json
+src/pages/AllStrings.jsx
+src/utils/buildCountryHTMLMap.js

@@ -13,8 +13,8 @@ const ThemeToggle = () => {
     <div className="theme-toggle">
       <button className={cx('btn', 'btn--toggle', 'theme')} onClick={toggleTheme}>
         {settings.theme === 'light'
-          ? <FontAwesomeIcon icon={faMoon} />
-          : <FontAwesomeIcon icon={faSun} />
+          ? <><FontAwesomeIcon icon={faSun} /><span>Light mode</span></>
+          : <><FontAwesomeIcon icon={faMoon} /><span>Dark mode</span></>
         }
       </button>
     </div>

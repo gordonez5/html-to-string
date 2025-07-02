@@ -11,12 +11,28 @@
 }
 
 .showHideToggle {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   text-align: center;
 
   &:active {
     color: var(--link-color);
+  }
+
+  &.open {
+    .caret {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .caret {
+    display: flex;
+    fill: var(--link-color);
+    margin-left: 0.25rem;
   }
 }
 

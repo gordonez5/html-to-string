@@ -1,7 +1,58 @@
 .list {
   &--unordered {
     & > li {
-      margin: 0.5rem 0;
+      margin: 1rem 0;
     }
+  }
+}
+
+.bulletList {
+  list-style-type: disc;
+  margin: 0 1rem 1rem;
+  padding-left: 1rem;
+
+  &.checkmark,
+  &.crossmark {
+    list-style-type: none;
+    padding-left: 0;
+
+    & > li {
+      position: relative;
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: -0.5em;
+        top: 0;
+        height: 1em;
+        width: 0.5em;
+      }
+    }
+  }
+
+  &.checkmark {
+    & > li {
+      &::before {
+        content: "\2713";
+        color: var(--color-functional-success-600, green);
+      }
+    }
+  }
+
+  &.crossmark {
+    & > li {
+      &::before {
+        content: "\2717";
+        color: var(--color-functional-error-600, red);
+      }
+    }
+  }
+
+  & > li {
+    line-height: 1.2;
+    list-style-type: inherit;
+    margin-bottom: 0.5rem;
   }
 }

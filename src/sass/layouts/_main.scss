@@ -5,6 +5,8 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--site-width);
   padding: 1rem;
   width: 100%;
 
@@ -37,15 +39,38 @@
 .grid {
   display: flex;
   gap: 2rem;
+  flex-direction: column;
   margin: 0 0 2rem;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
 
   .grid-item {
     background-color: var(--item-bg-color);
-    width: 50%;
+    width: 100%;
     border-color: var(--clr-text);
     border-radius: 1rem;
     border-style: dotted;
     border-width: 2px;
     padding: 1.5rem;
+
+    @include mq(md) {
+      width: 50%;
+    }
+  }
+}
+
+span.checkmark {
+  &::before {
+    content: "\2713";
+    color: var(--color-functional-success-600, green);
+  }
+}
+
+span.crossmark {
+  &::before {
+    content: "\2717";
+    color: var(--color-functional-error-600, red);
   }
 }

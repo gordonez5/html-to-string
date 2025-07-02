@@ -25,6 +25,16 @@ function Home() {
         </ul>
       </section>
 
+      <section>
+        <h3>Using class names for styling</h3>
+        <p>A number of class names can be added to the HTML markup to aid with styling. These include:</p>
+        <ul className="list--unordered">
+          <li><code className="inline">.bulletList</code><br />Added to <code className="inline">&lt;ul&gt;</code> elements, this class name will style the list with bullets</li>
+          <li><code className="inline">.bulletList.checkmark</code><br />Added to <code className="inline">&lt;ul&gt;</code> elements, this combination of class names will style the list with Unicode checkmarks ( <span className="checkmark"></span> )</li>
+          <li><code className="inline">.bulletList.crossmark</code><br />Added to <code className="inline">&lt;ul&gt;</code> elements, this combination of class names will style the list with Unicode crosses ( <span className="crossmark"></span> )</li>
+        </ul>
+      </section>
+
     </div>
   );
 }

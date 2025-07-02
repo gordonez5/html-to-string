@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 :root {
+  --site-width: 1200px;
   --ff-primary: 'Roboto', system-ui, sans-serif;
 
   @each $key, $value in $font-sizes {
