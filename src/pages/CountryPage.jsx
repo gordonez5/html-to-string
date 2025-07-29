@@ -7,8 +7,8 @@ import {
   getFlagEmoji
 } from '../data/countries';
 import {
-  processHtmlContent,
-  encodeHtmlForJsonSingleLine
+  encodeHtmlForJsonSingleLine,
+  processHtmlContent
 } from '../utils/htmlParser';
 
 const CountryPage = () => {

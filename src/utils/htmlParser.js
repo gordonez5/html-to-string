@@ -1,7 +1,18 @@
 export function encodeHtmlForJsonSingleLine(html) {
-  const cleaned = html.replace(/\s*\n\s*/g, ' ').trim().replace(/>\s+</g, '><');
-  return JSON.stringify(cleaned);
+  if (!html || typeof html !== 'string') return '';
+
+  return html
+    .replace(/\\/g, '\\\\')           // Escape backslashes first
+    .replace(/"/g, '\\"')             // Escape double quotes for JSON
+    .replace(/'/g, "\\'")             // Escape single quotes (new)
+    .replace(/\n/g, '')               // Remove newlines
+    .replace(/\r/g, '')               // Remove carriage returns
+    .trim();
 }
+// export function encodeHtmlForJsonSingleLine(html) {
+//   const cleaned = html.replace(/\s*\n\s*/g, ' ').trim().replace(/>\s+</g, '><');
+//   return JSON.stringify(cleaned);
+// }
 
 export function concatenateHtmlContent(sections = {}, wrapConfig = {}) {
   return Object.entries(sections)
@@ -79,4 +90,15 @@ export function processHtmlContent(
     show: show.trim(),
     hide: hide.trim()
   };
+}
+
+export function sanitizeHtmlResponse(apiHtml) {
+  if (!apiHtml || typeof apiHtml !== 'string') return '';
+
+  return apiHtml
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/\\"/g, '"') // Handles escaped double quotes
+    .replace(/\\n|\\r/g, '') // Remove line breaks (escaped ones)
+    .trim();
 }
